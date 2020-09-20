@@ -1,0 +1,202 @@
+/**
+ * @name FluffyCrystal
+ * @author Plox Design#5316
+ * @version 1.0.0
+ * @description 
+ * @invite https://www.ploxdesign.com/discord
+ * @authorId 174868361040232448
+ * @source https://ploxdesign.github.io/FluffyCrystal/base.css
+ * @website https://www.ploxdesign.com/discord
+*/
+
+@import url("https://ploxdesign.github.io/FluffyCrystal/base.css");
+
+@import url('https://discord-custom-covers.github.io/usrbg/snippets/userPopouts.css');
+@import url('https://discord-custom-covers.github.io/usrbg/snippets/modals.css');
+@import url('https://monstrousdev.github.io/themes/addons/user-tags.css');
+@import url("https://gibbu.github.io/BetterDiscord-Themes/addons/windows-titlebar.css");
+
+@import url("https://cdn.jsdelivr.net/gh/tonsky/FiraCode@1.207/distr/fira_code.css");
+
+:root {
+  /* Background image variables */
+  --background-image: url('https://cdn.discordapp.com/attachments/687770807136550913/756600899995959296/thumb-1920-805284.png');
+  --background-image-blur: 1px; 
+  --background-image-size: cover; 
+  --background-image-position: center; 
+
+  /* Popout & Modal variables */
+  --popout-modal-image: var(--background-image);
+  --popout-modal-blur: 2px; 
+  --popout-modal-size: cover; 
+  --popout-modal-position: center; 
+
+  /* Home image variables */
+  --home-button-image: url('https://cdn.discordapp.com/attachments/198587966753472512/743454113429192724/original_2.gif'); 
+  --home-button-size: cover;
+  --home-button-position: center; 
+
+  /* Brightness variables */
+  --serverlist-brightness: 0.7;
+  --left-brightness: 0.7;
+  --middle-brightness: 0.6; 
+  --right-brightness: 0; 
+  --popout-modal-brightness: 0.75;
+
+  /* Gradient variables */
+  --gradient-primary: 42, 72, 121; 
+  --gradient-secondary: 63, 81, 181;
+  --gradient-direction: 320deg; 
+
+  /* Tint variables */
+  --tint-colour: 255,51,159; 
+  --tint-brightness: 0; 
+
+  /* Other variables */
+  --window-padding: 0px;
+  --window-roundness: 0px; 
+  --scrollbar-colour: rgba(255,255,255,0.05); 
+  --link-colour: #D31F39; 
+  --show-gift-gif-buttons: block; 
+
+  --font: 'Bahnschrift';
+  
+  --radius: 5px;
+  --margin: 10px;
+  --shadow-size: var(--margin);
+  --shadow-color: #000;
+
+  /* Do not touch */
+  --update-notice-1: none;
+  
+}
+
+/*
+====================================================================================
+                                style things that already exist
+====================================================================================
+*/
+
+/* Friend list animation*/
+.peopleListItem-2nzedh {
+  background-color: transparent;
+}
+.peopleListItem-2nzedh:hover {
+  transition: all 0.3s ease;
+  transform: translateX(-0.5em);
+  border-right: solid 0.3em #3f6db5;
+  border-bottom: solid 1px rgba(0, 0, 0, 0);
+}
+
+/*Window Shadow*/
+.transparent{
+  background: transparent;
+}
+.transparent:not(.maximized) .appMount-3lHmkl{
+  border-radius: var(--radius);
+  margin:var(--margin);
+  width: calc(100% - (var(--margin) * 2)); /*Fix margin issues*/
+  height: calc(100% - var(--margin) * 2); /*Fix margin issues*/
+  box-shadow: 0 0 var(--shadow-size) 0 var(--shadow-color);
+  transform: translateZ(0); /*Fix position:fixed issues*/
+}
+
+/*Better Feedback Emojis*/
+.emojiHappy-1hbF93 {
+  background-image: url("/assets/da3651e59d6006dfa5fa07ec3102d1f3.svg");
+}
+.emojiNeutral-14asfM {
+  background-image: url("/assets/fa9b378aed10bba1aea54ca34e76fe4b.svg");
+}
+.emojiSad-1GqgAQ {
+  background-image: url("/assets/9dc0c15c9e35f7ba86150ae12e895d29.svg");
+}
+
+/* Change mention tags */
+.wrapper-3WhCwL {
+  color: #D31F39 !important;
+  background: rgba(12, 12, 12, 0.1) !important;
+  padding: 6px;
+  border-radius: 10px;
+}
+
+.verified-1eC5dy:not(.disableColor-MwOAZf) > svg path {
+  fill: #D31F39
+}
+
+/*Call dock*/
+.wrapper-3EGhDO {
+  background-color: var(--background-secondary);
+  border-radius: 25px;
+  padding: 0px;
+}
+
+.colorable-1bkp8v.white-3GPOIp, .colorable-1bkp8v.white-3GPOIp .centerIcon-2G6o-T {
+  color: currentColor;
+}
+
+.colorable-1bkp8v.primary-3NQg8g,
+.colorable-1bkp8v.primary-3NQg8g.active-1QRrIS, .colorable-1bkp8v.primary-3NQg8g:hover, 
+.colorable-1bkp8v.white-3GPOIp,
+.centerButton-3CaNcJ,
+.colorable-1bkp8v.white-3GPOIp.active-1QRrIS, .colorable-1bkp8v.white-3GPOIp:hover,
+.colorable-1bkp8v.red-33-Lnk {
+  background: none !important;
+}
+
+
+/* BOT badge design*/
+.botTagRegular-2HEhHi {
+  transition: .5s;
+  background: rgba(114,137,218,0.1);
+  color: #7289da;
+}
+
+.botTagRegular-2HEhHi:hover {
+  transition: .5s;
+  background: #7289da;
+  color: #fff;
+}
+
+/* White game icon in profile */
+.connectedAccountIcon-3P3V6F[alt*="Battle.net"]{content:url(/assets/3a257c4cab129e956b05bd50047eb0f9.png)}
+.connectedAccountIcon-3P3V6F[alt*=Facebook]{content:url(/assets/c926e69c482dac25b8e940db74496813.png)}
+.connectedAccountIcon-3P3V6F[alt*=GitHub]{content:url(/assets/9e2893717851c493b4bff518f8b63ee7.png)}
+.connectedAccountIcon-3P3V6F[alt*="League of Legends"]{content:url(/assets/fbbd224a0d94747c102515090682bbe1.png)}
+.connectedAccountIcon-3P3V6F[alt*=Reddit]{content:url(/assets/bcc7bc0c0b27f9cbadaa1a47ea79db22.png)}
+.connectedAccountIcon-3P3V6F[alt*=Spotify]{content:url(/assets/fe3770614c2658a07dea3ecb286ce745.png)}
+.connectedAccountIcon-3P3V6F[alt*=Skype]{content:url(/assets/de5fb9e860729912c65048c1c657e1a3.png)}
+.connectedAccountIcon-3P3V6F[alt*=Steam]{content:url(/assets/baf4bdd36b7ef74e8f34b402e66f81f4.png)}
+.connectedAccountIcon-3P3V6F[alt*=Twitch]{content:url(/assets/4c1bab3f945269a5c1be0b3a2c177141.png)}
+.connectedAccountIcon-3P3V6F[alt*=Twitter]{content:url(/assets/2ac50d286a1c883f28b5149239a8ad36.png)}
+.connectedAccountIcon-3P3V6F[alt*=YouTube]{content:url(/assets/0ef81742942677bcef0bebdfb7061d29.png)}
+.connectedAccountIcon-3P3V6F[alt*="Xbox Live"]{content:url(/assets/850ed4fcf5839b7a32651f5959e8511e.png)}
+
+/*
+====================================================================================
+                                Added stuff
+====================================================================================
+*/
+
+.total-members-count-box {
+  justify-content: left !important;
+  padding-top: 24px !important;
+}
+.total-members-count-box > div:first-child {
+  margin-bottom: 6px !important;
+}
+.total-members-count {
+  justify-content: left !important;
+}
+.total-members-count > span {
+  font-size: 12px !important;
+  line-height: 16px !important;
+  font-weight: 600 !important;
+  text-transform: uppercase;  
+
+color: var(--channels-default) !important;
+
+}
+.total-members-count > i {
+  display: none;
+}
